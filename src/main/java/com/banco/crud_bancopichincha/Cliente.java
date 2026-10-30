@@ -3,6 +3,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 @Entity
 public class Cliente {
     @Id
@@ -12,6 +14,8 @@ public class Cliente {
     private String cedula;
     private String correo;
     private String telefono;
+    @OneToMany(mappedBy = "cliente")
+private List<Cuenta> cuentas;
     // Constructor vacio
     public Cliente() {
     }
@@ -54,4 +58,11 @@ public class Cliente {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+    public List<Cuenta> getCuentas() {
+    return cuentas;
+}
+
+public void setCuentas(List<Cuenta> cuentas) {
+    this.cuentas = cuentas;
+}
 }

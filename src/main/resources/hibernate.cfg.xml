@@ -13,5 +13,11 @@
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="com.banco.crud_bancopichincha.Cliente"/>
+        
+        <mapping class="com.banco.crud_bancopichincha.Cuenta"/>
+        <mapping class="com.banco.crud_bancopichincha.TipoCuenta"/>
+        <mapping class="com.banco.crud_bancopichincha.Transaccion"/>
+        <mapping class="com.banco.crud_bancopichincha.Tarjeta"/>
+
     </session-factory>
 </hibernate-configuration>
